@@ -129,7 +129,7 @@ export default function SolarSystem() {
       textureUrl: "/textures/mars.jpg",
       size: 0.53,
       distance: 12,
-      orbitSpeed: 0.53,
+      orbitSpeed: 1,
       rotationSpeed: 0.018,
     },
     {
@@ -137,7 +137,7 @@ export default function SolarSystem() {
       textureUrl: "/textures/jupiter.jpg",
       size: 2.5,
       distance: 16,
-      orbitSpeed: 0.08,
+      orbitSpeed: 0.18,
       rotationSpeed: 0.04,
     },
     {
@@ -146,7 +146,7 @@ export default function SolarSystem() {
       size: 2.1,
       distance: 20,
       orbitSpeed: 0.3,
-      rotationSpeed: 0.038,
+      rotationSpeed: 0.068,
     },
     {
       name: "Uranus",
@@ -154,7 +154,7 @@ export default function SolarSystem() {
       size: 1.7,
       distance: 24,
       orbitSpeed: 0.12,
-      rotationSpeed: 0.03,
+      rotationSpeed: 0.05,
     },
     {
       name: "Neptune",
@@ -162,7 +162,7 @@ export default function SolarSystem() {
       size: 1.6,
       distance: 28,
       orbitSpeed: 0.06,
-      rotationSpeed: 0.032,
+      rotationSpeed: 0.052,
     },
   ];
 
