@@ -167,7 +167,7 @@ export default function SolarSystem() {
   ];
 
   return (
-    <div style={{ width: "100%", height: "calc(100vh - 80px)" }}>
+    <div style={{ width: "100%", height: "calc(100vh )" }}>
       <Canvas shadows camera={{ position: [0, 30, 40], fov: 70 }}>
         <CameraController />
         <ambientLight intensity={0.5} />

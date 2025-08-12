@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
-import SolarSystem from "./components/SolarSystem";
 
 function App() {
   return (

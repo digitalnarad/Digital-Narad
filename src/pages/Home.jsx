@@ -1,77 +1,80 @@
+// src/pages/Home.jsx
 import React from "react";
 import SolarSystem from "../components/SolarSystem";
+import { Link } from "react-router-dom";
+import { FaRocket, FaGlobe, FaLightbulb, FaChartLine } from "react-icons/fa";
 
 function Home() {
   return (
-    <div className=" text-white">
-      {/* SolarSystem fullscreen section */}
-      <section
-        className="w-full"
-        style={{
-          height: "calc(100vh - 80px)",
-          position: "sticky",
-          top: "80px",
-          zIndex: "0",
-        }}
-      >
+    <div className="relative w-full min-h-screen text-white overflow-hidden">
+      {/* Solar system full-screen background */}
+      <div className="fixed inset-0  z-0">
         <SolarSystem />
-      </section>
+      </div>
 
-      {/* Normal content below */}
-      <section className="py-20 px-6 md:px-16 bg-gray-900 z-50">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl font-bold mb-4 text-indigo-400">
-            Digital Narad - Your Cosmic Marketing Partner
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            We blend creativity, technology, and strategy to craft unforgettable
-            digital experiences. From futuristic designs to marketing campaigns
-            that convert, we guide your brand through the universe of digital
-            growth.
+      {/* Page content wrapper to match other pages */}
+      <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
+        <section
+          className="text-center mb-20 "
+          style={{ height: "300px" }}
+        ></section>
+
+        {/* Services */}
+        <section className="mb-20 z-10">
+          <h2 className="text-center text-3xl font-bold mb-12">Our Universe</h2>
+          <div className="grid gap-10 md:grid-cols-4">
+            {[
+              {
+                icon: <FaRocket size={40} />,
+                title: "Marketing Campaigns",
+                desc: "Launch powerful campaigns that reach the stars.",
+              },
+              {
+                icon: <FaGlobe size={40} />,
+                title: "Brand Strategy",
+                desc: "Build an identity that orbits in customers' minds.",
+              },
+              {
+                icon: <FaLightbulb size={40} />,
+                title: "Creative Design",
+                desc: "From nebula-inspired logos to galaxy-grade UI.",
+              },
+              {
+                icon: <FaChartLine size={40} />,
+                title: "Web Development",
+                desc: "Crafting sites that move at lightspeed.",
+              },
+            ].map((service, i) => (
+              <div
+                key={i}
+                className="bg-gray-900/60 p-6 rounded-2xl shadow-lg text-center transition transform hover:-translate-y-2 hover:bg-gray-800/80"
+              >
+                <div className="text-indigo-400 mb-4 flex justify-center">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="text-center z-10">
+          <h2 className="text-4xl font-extrabold mb-4">
+            Your brand deserves to shine among the stars.
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let’s launch it together.
           </p>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 md:px-16 bg-gray-800 z-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
-          <div className="p-8 bg-gray-900 rounded-lg shadow-lg hover:shadow-indigo-600 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-3 text-indigo-400">
-              Creative Design
-            </h3>
-            <p className="text-gray-400 leading-relaxed">
-              Eye-catching, modern, and user-friendly designs that perfectly
-              represent your brand identity.
-            </p>
-          </div>
-          <div className="p-8 bg-gray-900 rounded-lg shadow-lg hover:shadow-indigo-600 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-3 text-indigo-400">
-              Digital Marketing
-            </h3>
-            <p className="text-gray-400 leading-relaxed">
-              Data-driven campaigns tailored to boost your reach, engagement,
-              and conversions.
-            </p>
-          </div>
-          <div className="p-8 bg-gray-900 rounded-lg shadow-lg hover:shadow-indigo-600 transition duration-300">
-            <h3 className="text-2xl font-semibold mb-3 text-indigo-400">
-              Development
-            </h3>
-            <p className="text-gray-400 leading-relaxed">
-              Robust web and app solutions built with the latest technology
-              stacks.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-6 md:px-16 bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-700 text-center rounded-t-xl z-50">
-        <h2 className="text-4xl font-bold mb-6 text-white">
-          Ready to Launch Your Brand Into the Digital Universe?
-        </h2>
-        <button className="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition">
-          Contact Us Today
-        </button>
-      </section>
+          <Link
+            to="/contact"
+            className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg transition"
+          >
+            Book a Call
+          </Link>
+        </section>
+      </div>
     </div>
   );
 }
