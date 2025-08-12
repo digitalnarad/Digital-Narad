@@ -18,18 +18,7 @@ function App() {
         style={{ position: "relative" }}
       >
         <Navbar />
-        <section
-          className="w-full"
-          style={{
-            height: "calc(100vh - 80px)",
-            position: "sticky",
-            top: "80px",
-            zIndex: "0",
-          }}
-        >
-          <SolarSystem />
-        </section>
-        <div className="flex-1 z-50">
+        <div className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />

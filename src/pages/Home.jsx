@@ -9,12 +9,16 @@ function Home() {
         className="w-full"
         style={{
           height: "calc(100vh - 80px)",
-          background: "transparent",
+          position: "sticky",
+          top: "80px",
+          zIndex: "0",
         }}
-      ></section>
+      >
+        <SolarSystem />
+      </section>
 
       {/* Normal content below */}
-      <section className="py-20 px-6 md:px-16 bg-gray-900">
+      <section className="py-20 px-6 md:px-16 bg-gray-900 z-50">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <h1 className="text-5xl font-bold mb-4 text-indigo-400">
             Digital Narad - Your Cosmic Marketing Partner
@@ -28,7 +32,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-6 md:px-16 bg-gray-800">
+      <section className="py-16 px-6 md:px-16 bg-gray-800 z-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
           <div className="p-8 bg-gray-900 rounded-lg shadow-lg hover:shadow-indigo-600 transition duration-300">
             <h3 className="text-2xl font-semibold mb-3 text-indigo-400">
@@ -60,7 +64,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-16 px-6 md:px-16 bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-700 text-center rounded-t-xl">
+      <section className="py-16 px-6 md:px-16 bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-700 text-center rounded-t-xl z-50">
         <h2 className="text-4xl font-bold mb-6 text-white">
           Ready to Launch Your Brand Into the Digital Universe?
         </h2>
